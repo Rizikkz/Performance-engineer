@@ -132,5 +132,15 @@ sudo perf script | ./stackcollapse-perf.pl | ./flamegraph.pl > perf2.svg
   sudo apt-get install linux-tools-generic linux-cloud-tools-generic
   ```
   без результатно  
+2) Рещил найти исполняемый файл perf напрямую в системе
+```bash
+sudo find / -name perf
+```
+/usr/lib/linux-tools-5.15.0-107/perf --version
+perf version 5.15.149
 
-
+3) Запуск Flame Graph у меня отличался, пришлось указывать файл perf.data в домашней директории через -i
+```bash
+/usr/lib/linux-tools-5.15.0-107/perf script -i /home/rizik/perf.data | ./stackcollapse-perf.pl | ./flamegraph.pl > perf2.svg
+```
+- Итог: очень мало времени было на задание , perf2.svg скачать и запустить в браузере 
