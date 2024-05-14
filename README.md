@@ -127,7 +127,7 @@ sudo perf script | ./stackcollapse-perf.pl | ./flamegraph.pl > perf2.svg
     linux-tools-generic
     linux-cloud-tools-generic
 
-  1) Пробывал установить общие пакеты для инструмента Perf
+1) Пробывал установить общие пакеты для инструмента Perf
   ```bash
   sudo apt-get install linux-tools-generic linux-cloud-tools-generic
   ```
